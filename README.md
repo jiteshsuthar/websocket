@@ -17,12 +17,12 @@ Broadcasting currency rates to multiple users on real time basis using following
 		run redis-server
 		run redis-client
 	
-	add currency list using following redis hset command (in redis-client console)
+	Add currency list using following redis hset command (in redis-client console)
     
 		hset currencylist USDINR "USD/INR"
 		hset currencylist EURUSD "EUR/USD"
 		
-	verify the list from below statement:
+	Verify the list from below statement:
     
 		hgetall currencylist
 
