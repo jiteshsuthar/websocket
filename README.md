@@ -12,6 +12,10 @@ Broadcasting currency rates to multiple users on real time basis using following
 	2. redis
 	
 # Lets Try
+* Install node-modules using npm command from websocket directory.
+
+		npm install
+
 * Configure currency list in redis
 
 		run redis-server
