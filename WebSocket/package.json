@@ -1,0 +1,11 @@
+{
+  "name": "ratefeed",
+  "description": "Get currency rates",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "",
+    "redis": "",
+    "socket.io": "",
+    "system-sleep": ""
+  }
+}

@@ -1,0 +1,6 @@
+hset currencylist EURUSD "EUR/USD"
+hset currencylist GBPUSD "GBP/USD"
+hset currencylist USDCAD "USD/CAD"
+hset currencylist USDCHF "USD/CHF"
+hset currencylist USDJPY "USD/JPY"
+hset currencylist USDINR "USD/INR"

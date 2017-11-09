@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rate Feed</title>
+		<link rel="stylesheet" type="text/css" href="css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize-font.css">
+		<link rel="stylesheet" type="text/css" href="css/_custom.css">
+	</head>
+	<body class="">
+		<div class="alert" style="display: none;"><span><i class="material-icons dp48">error</i></span><span id="errormsg"></span> </div>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#!" class="brand-logo"><img style="" src="img/logo12.jpg" ></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#"><i style="font-size:3em;" id="onofficon" class="material-icons right offline">sentiment_dissatisfied</i><span id="lblusername"></span></a></li>
+						
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- Begin page content -->
+		<div class="container">
+			<section style="margin-top:20px;">
+				<div class="chips chips-autocomplete" id="ddcurrlist"></div>
+			</section>
+			<div id="norecord" style="display: none;
+				padding: 20px;
+				background-color: beige;
+				font-size: 18px;
+				color: brown;
+				/* font-style: italic; */
+				border-color: #0097bc;
+				border-left: 7px solid #ED9;
+				line-height: 2px;
+				"><span style="
+					/* padding-top: 20px; */
+				"><i class="material-icons dp48">announcement</i></span><span style="
+				/* padding-bottom: 10px; */
+			">No currencypair configured.</span></div>
+			<div class="row" id="currencypairrow">
+				
+			</div>
+		</div>
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h5>Book Deal</h5>
+				<input type="hidden" name="txtcurrpair" id="txtcurrpair">
+				<input type="hidden" name="txtcurrrate" id="txtcurrrate">
+				<input type="hidden" name="txttranstype" id="txttranstype">
+				<p>Currency pair will be booked at the rate <span id="lblrate" class="bold italic"></span></p>
+				<input type="text" placeholder="Enter Amount" id="txtcurramount" onkeyup="this.value=formatPrice.call(this.value,',','.')">
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="waves-effect waves-light btn" onclick="onBookDeal()">Book</a>
+			</div>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+
+<!-- 		<script src="js/amcharts.js"></script>
+		<script src="js/serial.js"></script>
+		<script src="js/light.js"></script>
+ -->		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery.sparkline.js"></script>		
+		<script src="js/materialize.js"></script>
+		<script src="js/mustache.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
